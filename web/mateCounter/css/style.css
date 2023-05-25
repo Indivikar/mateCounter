@@ -1,0 +1,555 @@
+/* 
+Mate-Hintergrundfarbe = #f9db5b
+Mate-Hintergrundfarbe = rgb(249, 219, 91) 
+
+Mate-Textfarbe = #173284
+Mate-Textfarbe = rgb(23, 50, 132)
+*/ 
+		
+body {
+	font-family: sans-serif;
+	text-align: center;
+	background-image: url('../images/mate-logo.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;	
+	background-color: #f9db5b;
+}
+
+
+html, body, .container {
+	height: 100%;
+}
+
+.container, .content, .audioControls, .content_progress_counter {
+	display: -webkit-flexbox;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.content {
+  background: rgba(197, 173, 71, 0.6);
+  box-shadow: 0px 0px 20px black;
+  border-radius: 10px;
+  margin-top: 48px;
+  margin-left: 11px;
+  width: 300px;
+  height: 320px;
+}
+
+.increase, .decrease, .content_progress_counter {
+	/*background: rgba(23, 50, 132, 0.9);*/
+	background: rgba(225, 225, 225, 0.95);
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 0px 10px black;
+	color: white;
+	color: black;
+	font-size: 40px;
+}
+
+.login_title, .login_bn, .login_pw, .login_button, .login_error, .no_more_attempts {
+	position:absolute;
+	left:50%;
+	margin-left:-119px;
+		
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	justify-content: space-around;
+	border: 0;
+	border-width: 0;
+	
+	display: -webkit-flexbox;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.login_form {
+	width:250px;
+}
+
+.login_title {
+	margin-top: -80px;
+	width: 250px;	
+}
+
+.login_bn {
+	margin-top: -40px;
+	font-size: 20px;
+	width: 250px;
+	height: 30px;
+	text-indent: 10px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+	transition: box-shadow 0.3s ease-in-out;
+	border-radius: 3px;
+}
+
+.login_pw {
+	margin-top: -20px;
+	font-size: 20px;
+	width: 250px;
+	height: 30px;
+	text-indent: 10px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+	transition: box-shadow 0.3s ease-in-out;
+	border-radius: 3px;
+}
+
+.login_bn:focus, .login_pw:focus {
+    outline: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.login_button {
+	margin-top: 0px;
+	font-size: 20px;
+	width: 150px;
+	height: 40px;
+	margin-left:-70px;
+}
+
+.login_error {
+	margin-top: 45px;
+	font-size: 15px;
+	width: 258px;
+	color: red;
+	height: 30px;
+	background: #fff;
+}
+
+.no_more_attempts {
+	margin-top: 20px;
+	font-size: 20px;
+	width: 258px;
+	color: red;
+	height: 90px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.counter, .increase, .decrease, .login_title, .login_bn, .login_pw, .login_button, .login_error, .no_more_attempts {
+	font-family: Serif;
+}
+
+.audioControls {
+	position:absolute;
+	left:50%;
+	margin-left:45px;
+	margin-top: 295px;
+	padding-left: 10px;
+	width:100px;
+	height: 24px;
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	justify-content: space-around;
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+}
+
+.volumeSlider {
+	width:70px;
+	
+}
+
+.content_progress_counter {
+	position:absolute;
+	left:50%;
+	margin-left:-134px;
+	width:280px;
+	margin-top: -90px;
+	height: 215px;
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	justify-content: space-around;
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+} 
+
+.rank_image {
+	position:absolute;
+	left:50%;
+	margin-left:-210px;
+	width:250px;
+	margin-top: -94px;
+	height: 100px;
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	justify-content: space-around;
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+} 
+
+.rank_number {
+	position:absolute;
+	left:50%;
+	margin-left:-35px;
+	width:70px;
+	margin-top: 28px;
+	height: 45px;
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	justify-content: space-around;
+	background: rgba(225, 225, 225, 0.95);
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 0px 10px black;
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+} 
+
+.rank_name {
+	position:absolute;
+	left:50%;
+	margin-left:-30px;
+	width:160px;
+	margin-top: -90px;
+	height: 90px;
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	/*color: white;*/
+	font-size: 20px;
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+} 
+
+.counter {
+	position:absolute;
+	left:50%;
+	margin-left:-119px;
+	width:250px;
+	margin-top: 158px;
+	height: 50px;
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	justify-content: space-around;
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+} 
+
+.content_progress {
+	position:absolute;
+	left:50%;
+	margin-left:-130px;
+	width:260px;
+	margin-top: 133px;
+	height: 100px;
+	/*background: #173284;*/
+	/*border-radius: 10px 10px 10px 10px;*/
+	display: flex;
+	justify-content: space-around;
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+} 
+
+
+
+.buttons {
+	position:absolute;
+	left:50%;
+	margin-left:-140px;
+	width:290px;
+	margin-top: 201px;
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+}
+
+.decrease {
+	padding-bottom: 50px;
+}
+
+.increase {
+	font-weight: bold;
+}
+
+.increase, .decrease {
+	border:0;
+	width:135px;
+	height: 60px;
+	/*background: #173284;
+	/*border-radius: 10px 10px 10px 10px;*/
+	/*color: white;*/
+	/*font-size: 40px;*/
+	/*font-family:Serif;*/
+	/*box-shadow: 0px 0px 10px black;*/
+}
+
+
+/* Fade */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+
+.hvr-fade:active {
+	transform: translateY(2px);
+}
+
+.hvr-fade:hover, .hvr-fade:focus {
+  background-color: #2098D1;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  
+  /* von mir hinzugefügt */
+  box-shadow: 0px 0px 10px black; 
+}
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  
+  /* von mir hinzugefügt */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.hvr-sweep-to-right:disabled {
+  opacity: 0.5; /* Setze die Deckkraft auf 50% */
+  cursor: not-allowed; /* Setze den Cursor auf "not allowed" */ 
+}
+
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white; 
+}
+
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  
+  /* von mir hinzugefügt */
+  box-shadow: 0px 0px 10px black;
+}
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  
+  /* von mir hinzugefügt */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.hvr-sweep-to-left:disabled {
+  opacity: 0.5; /* Setze die Deckkraft auf 50% */
+  cursor: not-allowed; /* Setze den Cursor auf "not allowed" */ 
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+@keyframes wackeln {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.wackeln {
+  animation-name: wackeln;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
