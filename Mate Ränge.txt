@@ -1,3 +1,5 @@
+# ACHTUNG - der Rangname darf nicht mehr als 27 Zeichen lang sein, Umlaute zählen als 1 Zeichen
+
 1. Okay Let's go
 2. Mate-Neuling
 3. Pipifax!
@@ -17,7 +19,7 @@
 17. Mate-Versteher
 18. MC Mate
 19. I Love Mate
-20. Mate aktiviert Abwehrkräfte
+20. Vollgas mit Mate
 21. Wird lustig ham se gesagt
 22. Du verleihst auch Brennholz
 23. Rumkugeln
@@ -29,9 +31,9 @@
 29. Viva la Mate
 30. Die Mate sei mit dir
 31. Kranke Sau
-32. Mate oder nicht Mate, das ist hier die Frage
+32. Mate-Sommelier
 33. ohne Mate - ohne mich
-34. Mate - Gesundheit, die schmeckt
+34. Mate-Genießer
 35. Isst auch kleine Kinder
 36. Meister Proper der Mate
 37. Mate-Held in Strumpfhosen

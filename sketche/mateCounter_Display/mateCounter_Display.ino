@@ -61,7 +61,9 @@ char ssid[] = "";       // your network SSID (name)
 char password[] = "";  // your network key
 
 // Config API
-const char* serverUrl = "";
+const String serverUrl = "";
+const String urlPathCounter = serverUrl + "/counter";
+const String urlPathSetRankUpPlayed = serverUrl + "/setrankupplayed";
 const String jwtToken = "";
 unsigned long delayBetweenStartSequence = 3000; // Zeit zwischen den Checks in der Startsequenz
 unsigned long delayBetweenChecks = 10000;        // Zeit zwischen den Checks auf dem API-Server (Daten-Server)
@@ -195,6 +197,7 @@ void playRankUpAudio(String jsonString) {
       delay(50);
       //myDFPlayer.next();  
       playAudio = false; 
+      setRankUpPlayed(); // Wenn RankUpAudio gespielt wurde, dann sende es per HTTP zum Server
  //   }  
       printDetail(myDFPlayer.readType(), myDFPlayer.read()); //Print the detail message from DFPlayer to handle different errors and states.
   } 
@@ -474,6 +477,30 @@ String getJson(){
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
     http.begin(serverUrl);
+    http.addHeader("Content-Type", "application/json");
+    http.addHeader("Authorization", "Bearer " + jwtToken);
+    http.addHeader("Connection", "close");
+
+    int httpCode = http.GET();
+    if (httpCode > 0) {
+      payload = http.getString();      
+    } else {
+      Serial.println("HTTP GET request failed");
+    }
+    
+    http.end();
+  }
+
+    Serial.println(payload);
+    return payload;
+}
+
+String setRankUpPlayed(){
+  String payload = "kein Json gefunden";
+
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+    http.begin(urlPathSetRankUpPlayed);
     http.addHeader("Content-Type", "application/json");
     http.addHeader("Authorization", "Bearer " + jwtToken);
     http.addHeader("Connection", "close");

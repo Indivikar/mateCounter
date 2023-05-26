@@ -23,8 +23,8 @@ function getData($db) {
 	
  	$countBottles = getNumberOfAllMate($db);
 	list($rang, $rang_up_nummer_min, $rang_up_nummer_max, $rang_name, $percent_to_next, $playRankUpAudio, $isRankUpAudioPlayed) = getRank($db, $countBottles);
-	$playRankUpAudio = !$isRankUpAudioPlayed;
-	$audioVolumeWatch = "12"; // max. = 30
+	
+	$audioVolumeWatch = "20"; // max. = 30
 	$lastTimestamp = getLastTimestamp($db);
 
 	return getJsonString($countBottles, $rang, $rang_up_nummer_min, $rang_up_nummer_max, $rang_name, $percent_to_next, $playRankUpAudio, $isRankUpAudioPlayed, $audioVolumeWatch, $lastTimestamp);
@@ -43,13 +43,11 @@ function getRank($db, $drunkBottles) {
 	$rang_name = $row['rang_name'];
 	$isRankUpAudioPlayed = $row['wurde_rang_up_gespielt'];
 
-	$playRankUpAudio = false;
+	$playRankUpAudio = 0;
 
-	if($rang_up_nummer_min == $drunkBottles) {
-		$playRankUpAudio = true; 
+	if($rang_up_nummer_min == $drunkBottles && $isRankUpAudioPlayed == 0) {
+		$playRankUpAudio = 1; 
 	}
-
-	setRankUpAudioPlayed($db, $rang);
 
 	// Berechne wieviel Prozent, es noch bis zum nächsten Rang sind
 	$max = $rang_up_nummer_max + 1; // hier immer um 1 hochzählen, damit es nie 100% werden

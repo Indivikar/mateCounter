@@ -26,7 +26,19 @@ if ($method === 'GET' && $path === '/counter') {
 	// Ausgabe für Web-API
 	header('Content-Type: application/json');
     echo $json_string; 
-	
+} else if ($method === 'GET' && $path === '/setrankupplayed') {
+	$countBottles = getNumberOfAllMate($db);
+	list($rang, $rang_up_nummer_min, $rang_up_nummer_max, $rang_name, $percent_to_next, $playRankUpAudio, $isRankUpAudioPlayed) = getRank($db, $countBottles);
+     
+	if (!isset($countBottles)) {
+		echo json_encode(array("message" => "Variable countBottles ist null"));
+	}
+	 
+ 	if (isset($rang)) {
+        setRankUpAudioPlayed($db, $rang);
+    } else {
+		echo json_encode(array("message" => "Variable rang ist null"));
+	} 	
 } else if ($method === 'POST' && $path === '/counter/increase') {
 	// ist die Anfrage genehmigt, wenn nicht wird hier abgebrochen
 	checkAuthentication();
