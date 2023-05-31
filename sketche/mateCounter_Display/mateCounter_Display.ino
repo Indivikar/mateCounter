@@ -525,7 +525,7 @@ String setRankUpPlayed(){
 
 void initDisplayILI9341() {
   tft.init();
-  tft.setRotation(1);
+  tft.setRotation(3);
   tft.fillScreen(colorBackground);
   tft.setSwapBytes(true);
   tft.fillScreen(TFT_WHITE);
@@ -575,6 +575,11 @@ void setImage(int yLocationImage, int imageWidth, int imageHeight, String rankNu
   
     int xLocationImageText = (displaySizeX - lineWidth) / 2;
     int yLocationImageText = (imageHeight / 2) + (lineHeight / 2) - 1;
+
+    // Die 1 ist nicht in der Mitte, deshalb die Korrektur, alle anderen Zahlen werden in der Mitte angezeigt
+    if(rankNumber == "1") {
+      xLocationImageText = xLocationImageText - 5;
+    }
 
     // Serial.print("lineWidth");
     // Serial.print(" -> ");

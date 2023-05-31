@@ -14,6 +14,9 @@
 # Programmierung
 Ich habe zum programmieren der ESP32 die [Arduino IDE 2](https://www.arduino.cc/en/software#future-version-of-the-arduino-ide) genutzt
 ### Arduino IDE Einstellungen
+
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+
 - Board:              `ESP32 Dev Module`
 - CPU Frequency:      `240MHz (WiFi/BT)`
 - Core Debug Level:   `None`
