@@ -11,12 +11,28 @@
 |  7  |   2   | 100k Ohm widerstand             | [Link](https://www.amazon.de/dp/B08QRTJN75) |                                                                                                                                                                                   |                       |
 |  8  |   1   | Pilz-Taster                     | [Link](https://www.amazon.de/dp/BB07BWY4XFL) |                       |
 
-# Programmierung
-Ich habe zum programmieren der ESP32 die [Arduino IDE 2](https://www.arduino.cc/en/software#future-version-of-the-arduino-ide) genutzt
-### Arduino IDE Einstellungen
+# Arduino IDE Einstellungen
+Ich habe zum programmieren der ESP32 die [Arduino IDE 2](https://www.arduino.cc/en/software#future-version-of-the-arduino-ide) genutzt, nach der Installation der Arduino IDE
+müssen noch ein paar einstellungen vorgenommen werden.
 
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+### ESP32 (mit CP2102) Treiber installieren
+1. Den [ESP32-Treiber](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) (CP210x Universal Windows Driver) runterladen und entpacken
+2. Den ESP32 mit einem USB-Kabel an den Rechner anschliessen
+3. Den Geräte-Manager öffnen (Windows-Taste + X > Geräte-Manager)
+4. In der Liste, unter "Anschlüsse (COM & LPT)" sollte der ESP32 mit einer Warnung stehen
+5. Rechts-Klick > Treiber aktualisieren > Auf meinem Computer nach Treibern suchen
+6. Durchsuchen... > [den Ordner mit Treiber auswählen] > Weiter
+7. Nach der Installation sollte die Warnung im Geräte-Manager weg sein und können fortfahren
 
+### ESP32 in der Arduino IDE installieren
+1. Gehe in der Arduino IDE 2.0 zu Datei > Einstellungen
+2. Kopiere die folgende Zeile und füge sie in das Feld „Zusätzlicher Boardverwalter-URLs“ ein und bestätige mit OK
+`https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
+3. Gehe in der Arduino IDE 2.0 zu Werkzeuge > Board > Board-Verwaltung
+4. In der Liste nach "esp32 von Espressif" suchen und installieren
+
+### Arduino IDE Konfiguration für den ESP32
+Die Konfiguration kann unter dem Menü-Punkt `Werkzeuge` vorgenommen werden.
 - Board:              `ESP32 Dev Module`
 - CPU Frequency:      `240MHz (WiFi/BT)`
 - Core Debug Level:   `None`
@@ -27,7 +43,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 - PSRAM:              `Disable`
 - Upload Speed:       `921600`
 
-### Bibliotheken die noch installiert werden müssen
+## Bibliotheken die noch installiert werden müssen
 | Nr. | Import                  |                    Name                     | Version |     Bemerkungen   |
 |:---:| :---:                   |---------------------------------------------|  :---:  |        :---:      |
 |  1  | ArduinoJson.h           | ArduinoJson von Benoit                      | v6.20.1 |                   |
